@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Pet from "./Pet";
 import useBreedList from "./setBreedList";
+import Results from "./Results";
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 
 const SearchParam = () => {
@@ -25,38 +25,35 @@ const SearchParam = () => {
             <form onSubmit={(e) => {
                 e.preventDefault();
                 requestPets();
-            }}>
+            }} >
                 <div>
-                <label htmlFor="location">
-                    Location
-                    <input onChange={e => setLocation(e.target.value)} id="location" value={location.toUpperCase()} placeholder="Location" />
-                </label>
+                    <label htmlFor="location">
+                        Location
+                        <input onChange={e => setLocation(e.target.value)} id="location" value={location.toUpperCase()} placeholder="Location" />
+                    </label>
                 </div>
                 <div>
-                <label htmlFor="animal"> Animal
-                    <select onChange={e => {
-                        setAnimal(e.target.value);
-                        setBreed("");
-                    }} id="animal" value={animal}>
-                        <option />
-                        {ANIMALS.map((animal) => (<option key={animal}>{animal}</option>))}
-                    </select>
-                </label>
+                    <label htmlFor="animal"> Animal
+                        <select onChange={e => {
+                            setAnimal(e.target.value);
+                            setBreed("");
+                        }} id="animal" value={animal}>
+                            <option />
+                            {ANIMALS.map((animal) => (<option key={animal}> {animal}</option>))}
+                        </select>
+                    </label>
                 </div>
                 <div>
-                <label htmlFor="breeds"> Breeds
-                    <select onChange={e => setBreed(e.target.value)} id="breeds" disabled={BREEDS.length === 0} value={breeds}>
-                        <option />
-                        {BREEDS.map((breed) => (<option key={breed}>{breed}</option>))}
-                    </select>
-                </label>
+                    <label htmlFor="breeds"> Breeds
+                        <select onChange={e => setBreed(e.target.value)} id="breeds" disabled={BREEDS.length === 0} value={breeds}>
+                            <option />
+                            {BREEDS.map((breed) => (<option key={breed}>{breed}</option>))}
+                        </select>
+                    </label>
                 </div>
                 <button>Submit</button>
             </form>
-            {pets.map((pet) => (
-                <Pet name={pet.name} animal={pet.animal} breed={pet.breed} key={pet.id} />
-
-            ))}
+            <Results  pets={pets}/>
         </div>
     );
 };
