@@ -4,7 +4,7 @@ const fetchBreedList= async ({ queryKey }) => {
         {
             return [];
         }
-    const apiRes = await fetch(`http://pets-v2.dev-apis.com/breeds?animal=${animal}`);
+    const apiRes = await fetch(`https://pets-v2.dev-apis.com/breeds?animal=${animal}`);
     if (!apiRes.ok) {
         throw new Error(`breeds/${animal} fetch not ok`);
     }
