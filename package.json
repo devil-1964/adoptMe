@@ -1,6 +1,6 @@
 {
-  "name": "adoptme",
   "homepage": "https://devil-1964.github.io/adoptMe/",
+  "name": "adoptme",
   "private": true,
   "version": "0.0.0",
   "type": "module",
