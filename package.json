@@ -1,7 +1,7 @@
 {
   "homepage": "https://devil-1964.github.io/adoptMe",
   "name": "adoptme",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
