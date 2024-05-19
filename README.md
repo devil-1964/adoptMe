@@ -13,7 +13,7 @@ AdoptMe is a web application designed to help people find pets available for ado
 
 ## ✨ Features
 
-- **⚛️ React Hooks:** Utilizes hooks such as `useState`, `useEffect`, and `useContext` to manage state and side effects.
+- **⚛️ React Hooks:** Utilizes hooks such as `useState` and `useEffect` to manage state and side effects.
 - **🔗 Fetch API:** Uses fetch queries to retrieve data on animals and breeds from an external API.
 - **🔍 Search Parameters:** Allows users to search for pets by specifying location, animal type, and breed.
 - **📱 Responsive Design:** Ensures the application is usable on various devices, including mobile phones and tablets.
